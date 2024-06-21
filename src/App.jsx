@@ -4,18 +4,16 @@ import {
 	createBrowserRouter,
 	createRoutesFromElements,
 } from "react-router-dom";
-import RootLayout from "./layout/RootLayout";
+import AdminLayout from "./layout/AdminLayout";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
-import Settings from "./pages/Settings";
 
 function App() {
 	const router = createBrowserRouter(
 		createRoutesFromElements(
-			<Route path='/' element={<RootLayout />}>
+			<Route path='/dashboard' element={<AdminLayout />}>
 				<Route index element={<Dashboard />} />
 				<Route path='profile' element={<Profile />} />
-				<Route path='settings' element={<Settings />} />
 			</Route>
 		)
 	);
