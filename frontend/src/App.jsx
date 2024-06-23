@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import AdminLayout from "./layout/AdminLayout";
 import Dashboard from "./pages/Dashboard";
+import ProductDetails from "./pages/ProductDetails";
 import Profile from "./pages/Profile";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 		createRoutesFromElements(
 			<Route path='/dashboard' element={<AdminLayout />}>
 				<Route index element={<Dashboard />} />
+				<Route path='product/:id' element={<ProductDetails />} />
 				<Route path='profile' element={<Profile />} />
 			</Route>
 		)
