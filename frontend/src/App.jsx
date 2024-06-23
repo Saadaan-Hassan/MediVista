@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import AdminLayout from "./layout/AdminLayout";
 import Dashboard from "./pages/Dashboard";
+import Products from "./pages/Products.jsx";
 import ProductDetails from "./pages/ProductDetails";
 import Profile from "./pages/Profile";
 
@@ -14,7 +15,8 @@ function App() {
 		createRoutesFromElements(
 			<Route path='/dashboard' element={<AdminLayout />}>
 				<Route index element={<Dashboard />} />
-				<Route path='product/:id' element={<ProductDetails />} />
+				<Route path='products/' element={<Products />} />
+				<Route path='products/:id' element={<ProductDetails />} />
 				<Route path='profile' element={<Profile />} />
 			</Route>
 		)

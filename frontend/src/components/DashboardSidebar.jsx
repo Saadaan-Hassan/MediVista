@@ -8,7 +8,7 @@ import {
 	useBreakpointValue,
 } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, User, LogOut } from "lucide-react";
+import { LayoutDashboard, User, LogOut, Box as BoxIcon } from "lucide-react";
 
 export default function DashboardSidebar() {
 	// Determine whether to show icons or labels based on screen size
@@ -34,6 +34,11 @@ export default function DashboardSidebar() {
 			to: "/dashboard",
 			icon: <LayoutDashboard size={24} color='lightgreen' />,
 			label: "Dashboard",
+		},
+		{
+			to: "/dashboard/products",
+			icon: <BoxIcon size={24} color='lightgreen' />,
+			label: "Products",
 		},
 		{
 			to: "/dashboard/profile",
